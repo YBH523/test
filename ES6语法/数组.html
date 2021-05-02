@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        let arrm = [[1, '张三'], [2, '李四']]
+        //循环9次,遍历数组,x为数组下标是循环次数对应的元素
+        let arrMap = arr.map(function (x, y) {
+            // console.log(x)
+            // console.log(x, y)
+            return x + 1
+        })
+
+        //循环8次,每循环一次删除数组前面两个元素，每次x,y对应数组第一和第二个元素，z为遍历数组下标对应的元素(从1开始)
+        let arrReduce = arr.reduce(function (x, y, z) {
+            // let a = x+y+z
+            // console.log(x,y,z)
+
+            return x
+        })
+        // console.log(arrMap)
+        // console.log(arrReduce)
+        let map = new Map(arrm)
+
+        // console.log(map)
+        // for (let key of map) {
+        //     console.log(key)
+        // }
+        // map.forEach(function (a, b) {
+        //     console.log(this.a, b)
+        // },)
+
+        let [a, b, c, ...a] = arr
+
+    </script>
+</body>
+
+</html>

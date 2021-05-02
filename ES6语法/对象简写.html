@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let name = '张三'
+        let age = 18
+        let a = () => { console.log(age) }
+        //若属性名跟属性值的变量名相同，则可以只写一个
+        let b = {
+            name,
+            age,
+            a,
+            //若是方法，则可以省略function,此时不是箭头函数，不能省略return和大括号
+            c() {
+                console.log(this.age)
+            },
+            d: () => { }
+
+
+        }
+        b.a()
+        b.c()
+    </script>
+</body>
+
+</html>

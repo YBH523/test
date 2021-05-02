@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>张三</button>
+    <!-- <script>
+        class People {
+            //当执行new Student()命令后，此函数会被调用
+            //构造函数
+            constructor(name, age) {
+                this.name = name
+                this.age = age
+                this.btn = document.querySelector('button')
+                this.btn.onclick = this.sayname
+                // this.sayname()
+            }
+            //方法,在这里相当于给本类的原型添加方法，相当于People.prototype.sayname
+            sayname() {
+                let a = 1;
+                b()
+                // console.log(this.name)
+                function b() { console.log(this) }
+
+
+            }
+        }
+        class Student extends People {
+            constructor(name, age, xuehao) {
+                //super()表示调用父类的构造函数，使得子类能用父类中带有this的方法
+                //super只能调用函数
+                super(name, age)
+                this.xuehao = xuehao
+            }
+        }
+
+        let zs = new Student('张三', 18, 2017)
+        let p = new People('李四', 20)
+
+    </script> -->
+
+    <script>
+        // let a = 1
+        class People {
+            constructor() {
+                //第一种调用方法
+                this.sayname()()
+
+                //第二种调用方法
+                this.a = this.sayname()
+                this.a()
+            }
+
+            sayname() {
+                // console.log(this)
+                let b = function () { console.log(this) }
+                b()
+                return b
+            }
+        }
+        let p = new People()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = {
+            name:'张三',
+            age:18,
+            fun(){return this.age}
+        }
+
+//解构对象
+let {name,age,fun} = a
+//这句话的意思就是let name = a.name;遍历对象，把对象的属性值拿出来
+// {...b} = a 表示把a对象的属性和方法传给b对象,二者的区别在于b是跟a一样的对象(跟a的地址不一样)，而c则只是指向a对象(地址一样)
+let {...b} = a
+let c = a
+
+a.age = 20
+console.log(name)
+console.log(age)
+console.log(a)
+console.log(b)
+console.log(c)
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //传统函数
+        function b(x, y) {
+            return x + y
+        }
+        //箭头函数
+        //箭头函数必须用一个变量保存，不能像传统函数一样有函数名
+        //若只有return一条语句，则可以省略大括号和return
+        //若只有一个参数，则参数的括号也可省略
+        //箭头函数的this指向在赋值的时候就绑定了且不会改变，call，apply对箭头函数无效
+        let a = (x, y) => x + y
+        // a(1,2)
+        console.log(a(1, 2))
+    </script>
+</body>
+
+</html>
