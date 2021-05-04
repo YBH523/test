@@ -1,0 +1,23 @@
+main{
+    /* background-color: rgb(40, 153, 50); */
+    width: 750px;
+    margin:0 auto;
+
+}
+section{
+    
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+}
+input{
+    width: 80px;
+}
+table{
+    margin: 10px 250px;
+    width: 250px;
+    
+}
+tr{
+    text-align: center;
+}
