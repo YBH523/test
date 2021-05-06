@@ -20,11 +20,11 @@ function updata(arr) {
 
 // 品牌查询
 function namequery() {
-
+    let str = document.getElementById('inputn').value
     if (typeof str == 'string') {
         let paiarr = numquery()
         let zarr = []
-        let str = document.getElementById('inputn').value
+        
         paiarr.forEach(function (value) {
             if (str == value.name) {
                 zarr.push(value)
@@ -37,9 +37,9 @@ function namequery() {
 
 // 价格查询
 function numquery() {
-
+    let arr = [document.getElementById('input0').value, document.getElementById('input1').value]
     if (typeof arr == 'object') {
-        let arr = [document.getElementById('input0').value, document.getElementById('input1').value]
+        
         //存放当前页面的tr
         let jiaarr = data.filter(function (value) {
             return value.price >= arr[0] && value.price <= arr[1]
